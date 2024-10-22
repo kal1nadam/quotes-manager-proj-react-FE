@@ -30,7 +30,7 @@ A **React TypeScript** frontend with **Mantine** component library for a .NET We
 
 Ensure you have the following installed on your local development environment:
 
-- Node.js (v14+)
+- Node.js (v18+)
 - .NET 6+ (for backend API)
 - A code editor like VS Code
 
