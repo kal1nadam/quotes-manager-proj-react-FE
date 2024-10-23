@@ -29,7 +29,7 @@ export const useAuth = () => {
 // Provider component
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('accessToken'));
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(!!localStorage.getItem('isAdmin'));
 
   const login = async (email: string, password: string) => {
     try {
@@ -48,6 +48,9 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       localStorage.setItem('isAdmin', decodedToken.isAdmin);
       if(decodedToken.isAdmin === 'true'){
         setIsAdmin(true);
+      }
+      else{
+        setIsAdmin(false)
       }
 
       // Set the accessToken as a default header for all axios requests
@@ -77,6 +80,8 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       localStorage.setItem('isAdmin', decodedToken.isAdmin);
       if(decodedToken.isAdmin === 'true'){
         setIsAdmin(true);
+      }else{
+        setIsAdmin(false)
       }
 
       // Set the accessToken as a default header for all axios requests
@@ -93,6 +98,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
     localStorage.removeItem('userId');
+    localStorage.removeItem('isAdmin');
     window.location.href = '/';
     setIsLoggedIn(false);
   };
