@@ -2,6 +2,13 @@
 
 A **React TypeScript** frontend with **Mantine** component library for a .NET Web API. This project is a simple quote management application that allows users to manage their own quotes, while users with the admin role can manage all quotes. It also includes authorization with **JWT tokens** for secure access control.
 
+## Backend Repository
+
+This frontend connects to the .NET Web API backend for managing quotes. You can find the backend repository here:
+
+[Backend Repository - kal1nadam-quotes-manager-api-dotnet-BE](https://github.com/kal1nadam/kal1nadam-quotes-manager-api-dotnet-BE)
+
+
 ## Features
 
 - **CRUD Operations**: Create, read, update, and delete quotes in a card format.
