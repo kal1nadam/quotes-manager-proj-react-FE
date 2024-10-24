@@ -6,7 +6,7 @@ A **React TypeScript** frontend with **Mantine** component library for a .NET We
 
 This frontend connects to the .NET Web API backend for managing quotes. You can find the backend repository here:
 
-[Backend Repository - kal1nadam-quotes-manager-api-dotnet-BE](https://github.com/kal1nadam/kal1nadam-quotes-manager-api-dotnet-BE)
+[Backend Repository - kal1nadam-quotes-manager-api-dotnet-BE](https://github.com/kal1nadam/quotes-manager-api-dotnet-BE)
 
 
 ## Features
